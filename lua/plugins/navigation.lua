@@ -13,14 +13,26 @@ return {
 
         " Use :close instead of :q
         cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'close' : 'q')<CR>
-    ]])
+      ]])
     end,
   },
   { "tpope/vim-surround" },
+  { "tpope/vim-rhubarb" },
   { "tpope/vim-abolish" },
   { "tpope/vim-dispatch" },
   { "tpope/vim-unimpaired" },
-  { "ThePrimeagen/harpoon" },
+  {
+    "ThePrimeagen/harpoon",
+    keys = {
+      {
+        "<leader>mc",
+        function()
+          require("harpoon.mark").add_file()
+        end,
+        desc = "Add file to harpoon",
+      },
+    },
+  },
 
   -- :Reject and :Keep for qfl, sync location
   {
@@ -54,4 +66,22 @@ return {
       })
     end,
   },
+
+  -- better diff view
+  -- {
+  --   "sindrets/diffview.nvim",
+  --   -- lazy = true,
+  --   -- cmd = {
+  --   --   "DiffviewOpen",
+  --   --   "DiffviewClose",
+  --   --   "DiffviewToggleFiles",
+  --   --   "DiffviewFocusFiles",
+  --   --   "DiffviewRefresh",
+  --   -- },
+  --   config = function()
+  --     require("diffview").setup({
+  --       use_icons = true,
+  --     })
+  --   end,
+  -- },
 }
