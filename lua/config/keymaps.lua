@@ -9,3 +9,18 @@ vim.keymap.set("n", "<C-s>", "<cmd>lua require('tsht').nodes()<CR>")
 vim.keymap.set("n", "<C-=>", "<cmd>vert resize +10<CR>", { noremap = true })
 vim.keymap.set("n", "<C-->", "<cmd>vert resize -10<CR>", { noremap = true })
 -- vim.keymap.set("n", "<leader>s", "<cmd>lua require('spectre').open_visual()<CR>")
+
+-- neovide specific keymaps
+if vim.g.neovide then
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set("n", "<D-=>", function()
+    change_scale_factor(1.25)
+  end)
+  vim.keymap.set("n", "<D-->", function()
+    change_scale_factor(1 / 1.25)
+  end)
+  -- vix cmd+v not pasting stuff
+  vim.keymap.set("i", "<D-v>", "<C-r>*<CR>", { noremap = true })
+end
