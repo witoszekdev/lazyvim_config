@@ -1,23 +1,23 @@
 return {
   -- task runner
-  {
-    "stevearc/overseer.nvim",
-    config = function()
-      require("overseer").setup()
-    end,
-  },
+  -- {
+  --   "stevearc/overseer.nvim",
+  --   config = function()
+  --     require("overseer").setup()
+  --   end,
+  -- },
 
-  {
-    "ThePrimeagen/refactoring.nvim",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-treesitter/nvim-treesitter" },
-    },
-    config = function()
-      require("refactoring").setup({})
-      require("telescope").load_extension("refactoring")
-    end,
-  },
+  -- {
+  --   "ThePrimeagen/refactoring.nvim",
+  --   dependencies = {
+  --     { "nvim-lua/plenary.nvim" },
+  --     { "nvim-treesitter/nvim-treesitter" },
+  --   },
+  --   config = function()
+  --     require("refactoring").setup({})
+  --     require("telescope").load_extension("refactoring")
+  --   end,
+  -- },
 
   {
     "iamcco/markdown-preview.nvim",
@@ -30,15 +30,15 @@ return {
 
   { "wsdjeg/vim-fetch" }, -- :e with line numbers
 
-  {
-    "ThePrimeagen/refactoring.nvim",
-    config = function()
-      require("refactoring").setup({})
-      require("telescope").load_extension("refactoring")
-    end,
-  },
+  -- {
+  --   "ThePrimeagen/refactoring.nvim",
+  --   config = function()
+  --     require("refactoring").setup({})
+  --     require("telescope").load_extension("refactoring")
+  --   end,
+  -- },
 
-  { "echasnovski/mini.align", version = false },
+  -- { "echasnovski/mini.align", version = false },
 
   -- to check:
   -- {

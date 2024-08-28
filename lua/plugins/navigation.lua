@@ -20,19 +20,64 @@ return {
   { "tpope/vim-rhubarb" },
   { "tpope/vim-abolish" },
   { "tpope/vim-dispatch" },
-  { "tpope/vim-unimpaired" },
   {
-    "ThePrimeagen/harpoon",
-    keys = {
-      {
-        "<leader>mc",
-        function()
-          require("harpoon.mark").add_file()
-        end,
-        desc = "Add file to harpoon",
-      },
+    "tummetott/unimpaired.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add options here if you wish to override the default settings
     },
   },
+  -- {
+  --   "ThePrimeagen/harpoon",
+  --   branch = "harpoon2",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   config = function()
+  --     local harpoon = require("harpoon")
+  --     harpoon:setup()
+  --   end,
+  --   keys = {
+  --     {
+  --       "<leader>mc",
+  --       function()
+  --         require("harpoon"):list():append()
+  --       end,
+  --       desc = "Add file to harpoon",
+  --     },
+  --     {
+  --       "<leader>ma",
+  --       function()
+  --         local harpoon = require("harpoon")
+  --         harpoon.ui:toggle_quick_menu(harpoon:list())
+  --       end,
+  --       desc = "Open harpoon menu",
+  --     },
+  --     {
+  --       "<leader>mt",
+  --       function()
+  --         local conf = require("telescope.config").values
+  --         local function toggle_telescope(harpoon_files)
+  --           local file_paths = {}
+  --           for _, item in ipairs(harpoon_files.items) do
+  --             table.insert(file_paths, item.value)
+  --           end
+  --
+  --           require("telescope.pickers")
+  --             .new({}, {
+  --               prompt_title = "Harpoon",
+  --               finder = require("telescope.finders").new_table({
+  --                 results = file_paths,
+  --               }),
+  --               previewer = conf.file_previewer({}),
+  --               sorter = conf.generic_sorter({}),
+  --             })
+  --             :find()
+  --         end
+  --         toggle_telescope(require("harpoon"):list())
+  --       end,
+  --       desc = "Open telescope window",
+  --     },
+  --   },
+  -- },
 
   -- :Reject and :Keep for qfl, sync location
   {

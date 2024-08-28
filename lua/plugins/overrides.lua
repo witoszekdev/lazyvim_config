@@ -35,6 +35,16 @@ return {
     },
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      local actions = require("telescope.actions")
+
+      -- opts.defaults.mappings["i"] = vim.list_extend(opts.defaults.mappings["i"], {{"<c-q>": }})
+      opts.defaults.mappings["i"]["<c-q>"] = actions.send_selected_to_qflist
+    end,
+  },
+
   -- todo: fix invalid config
   -- todo: add mapping for opening cmp
   -- {
@@ -112,19 +122,19 @@ return {
     end,
   },
 
-  { "folke/tokyonight.nvim", enabled = false },
+  -- { "folke/tokyonight.nvim", enabled = false },
 
-  {
-    "zbirenbaum/copilot.lua",
-    opts = {
-      suggestion = { enabled = false },
-      panel = { enabled = true },
-      filetypes = {
-        markdown = true,
-        help = true,
-      },
-    },
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   opts = {
+  --     suggestion = { enabled = false },
+  --     panel = { enabled = true },
+  --     filetypes = {
+  --       markdown = true,
+  --       help = true,
+  --     },
+  --   },
+  -- },
 
   {
     "williamboman/mason.nvim",
