@@ -88,12 +88,12 @@ return {
   },
 
   -- super duper search and replace
-  {
-    "nvim-pack/nvim-spectre",
-    config = function()
-      require("spectre").setup()
-    end,
-  },
+  -- {
+  --   "nvim-pack/nvim-spectre",
+  --   config = function()
+  --     require("spectre").setup()
+  --   end,
+  -- },
 
   -- file utils
   {
