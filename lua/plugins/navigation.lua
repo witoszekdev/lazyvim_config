@@ -99,6 +99,14 @@ return {
   {
     "chrisgrieser/nvim-genghis",
     dependencies = { "stevearc/dressing.nvim" },
+    config = function()
+      require("genghis").setup({
+        backdrop = {
+          enabled = true,
+          blend = 50,
+        },
+      })
+    end,
   },
 
   -- conflicts resoliution
