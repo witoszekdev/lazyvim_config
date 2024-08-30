@@ -4,7 +4,6 @@ return {
     "tpope/vim-fugitive",
     init = function()
       vim.cmd([[
-        command! 
         command! -nargs=0 Gp :Git push
         command! -nargs=0 Gpf :Git push --force-with-lease
         command! -nargs=1 Gco :Git checkout <f-args>
