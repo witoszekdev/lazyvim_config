@@ -43,54 +43,54 @@ return {
   --   },
   -- },
 
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --
-  --   opts = {
-  --     servers = {
-  --       vtsls = {
-  --         settings = {
-  --           complete_function_calls = true,
-  --           vtsls = {
-  --             enableMoveToFileCodeAction = true,
-  --             autoUseWorkspaceTsdk = true,
-  --             experimental = {
-  --               completion = {
-  --                 enableServerSideFuzzyMatch = true,
-  --               },
-  --             },
-  --           },
-  --           typescript = {
-  --             updateImportsOnFileMove = { enabled = "always" },
-  --             suggest = {
-  --               completeFunctionCalls = true,
-  --             },
-  --             inlayHints = {
-  --               -- disable due to error
-  --               enumMemberValues = { enabled = false },
-  --               functionLikeReturnTypes = { enabled = false },
-  --               parameterNames = { enabled = false },
-  --               parameterTypes = { enabled = false },
-  --               propertyDeclarationTypes = { enabled = false },
-  --               variableTypes = { enabled = false },
-  --             },
-  --           },
-  --         },
-  --       },
-  --     },
-  --   },
-  -- },
+  {
+    "neovim/nvim-lspconfig",
 
-  -- {
-  --   "antosha417/nvim-lsp-file-operations",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-tree/nvim-tree.lua",
-  --   },
-  --   config = function()
-  --     require("lsp-file-operations").setup()
-  --   end,
-  -- },
+    opts = {
+      servers = {
+        vtsls = {
+          settings = {
+            complete_function_calls = true,
+            vtsls = {
+              enableMoveToFileCodeAction = true,
+              autoUseWorkspaceTsdk = true,
+              experimental = {
+                completion = {
+                  enableServerSideFuzzyMatch = true,
+                },
+              },
+            },
+            typescript = {
+              updateImportsOnFileMove = { enabled = "always" },
+              suggest = {
+                completeFunctionCalls = true,
+              },
+              inlayHints = {
+                -- disable due to error
+                enumMemberValues = { enabled = false },
+                functionLikeReturnTypes = { enabled = false },
+                parameterNames = { enabled = false },
+                parameterTypes = { enabled = false },
+                propertyDeclarationTypes = { enabled = false },
+                variableTypes = { enabled = false },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-tree.lua",
+    },
+    config = function()
+      require("lsp-file-operations").setup()
+    end,
+  },
 
   -- {
   --   "neovim/nvim-lspconfig",

@@ -7,4 +7,14 @@ return {
       -- ft_to_parser.mdx = "markdown"
     end,
   },
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = {
+      linters_by_ft = {
+        -- disable annoying linter, we use prettier anyway
+        markdown = {},
+      },
+    },
+  },
 }
