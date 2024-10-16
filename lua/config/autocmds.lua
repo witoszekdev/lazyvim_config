@@ -10,3 +10,17 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "markdown"
   end,
 })
+
+vim.api.nvim_create_user_command("CopyAbsolutePath", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("*", path)
+end, {})
+
+vim.api.nvim_create_user_command("CopyRelativePath", function()
+  vim.api.nvim_call_function("setreg", { "+", vim.fn.fnamemodify(vim.fn.expand("%"), ":.") })
+end, {})
+
+vim.api.nvim_create_user_command("CopyFilename", function()
+  local filename = vim.fn.expand("%:t")
+  vim.fn.setreg("+", filename)
+end, {})
