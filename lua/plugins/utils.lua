@@ -87,4 +87,16 @@ return {
   --   end,
   --   ft = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "sass", "html" }
   -- },
+  --
+  -- {
+  --   "gbprod/substitute.nvim",
+  --   config = function()
+  --     vim.keymap.set(
+  --       "v",
+  --       "<leader>ss",
+  --       require("substitute").visual,
+  --       { noremap = true, desc = "Repalce selection with registry" }
+  --     )
+  --   end,
+  -- },
 }

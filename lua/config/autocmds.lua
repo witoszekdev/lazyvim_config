@@ -24,3 +24,5 @@ vim.api.nvim_create_user_command("CopyFilename", function()
   local filename = vim.fn.expand("%:t")
   vim.fn.setreg("+", filename)
 end, {})
+
+vim.opt.clipboard = ""
